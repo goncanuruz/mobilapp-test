@@ -12,8 +12,17 @@ const NavigationProvider = () => {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={DefaultStack} />
-        <Tab.Screen name="Profile" component={ProfileScreen} />
+        <Tab.Screen options={{}} name="Home" component={HomeScreen} />
+        <Tab.Screen
+          name="InnerScreen"
+          options={{
+            tabBarButton(props) {
+              return null;
+            },
+          }}
+          component={DefaultStack}
+        />
+        {/* <Stack.Screen name="Profile" component={ProfileStack} /> */}
         <Tab.Screen name="Notification" component={NotificationScreen} />
       </Tab.Navigator>
     </NavigationContainer>
@@ -28,9 +37,7 @@ const DefaultStack = ({route}: any) => {
         tabBarShowLabel: false,
         tabBarInactiveTintColor: 'gray',
       })}>
-      <Stack.Screen name="InnerHome" component={HomeScreen} />
       <Stack.Screen name="PrivilegeDetailScreen" component={PrivilegeScreen} />
-      <Stack.Screen name="Profile" component={ProfileStack} />
     </Stack.Navigator>
   );
 };

@@ -23,7 +23,7 @@ function CreateVehicleModal() {
           justifyContent: 'space-around',
           alignItems: 'center',
         }}>
-        <Text>Hello!</Text>
+        <Text>Hello Faruk!</Text>
         <Button title="Hide modal" onPress={() => onModalOpen()} />
       </View>
     </Modal>

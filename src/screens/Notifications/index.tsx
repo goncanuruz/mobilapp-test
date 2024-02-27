@@ -10,15 +10,16 @@ export default function NotificationScreen({navigation}: {navigation: any}) {
       <TouchableOpacity
         accessibilityRole="button"
         onPress={() => {
-          navigation.navigate('Home', {
+          console.log('aaa');
+          navigation.navigate('InnerScreen', {
             screen: 'PrivilegeDetailScreen',
             params: {privilegeId: 'privilegeId-value'},
           });
         }}
-        style={{flex: 1}}>
+        style={{flex: 1, marginBottom: 30}}>
         <Text style={{color: '#673ab7'}}>{'Detaya git'}</Text>
 
-        <View style={{flex: 1}}>
+        <View style={{flex: 1, marginTop: 30}}>
           <Button
             title="Show modal"
             onPress={() => dispatch(setShowCreateVehicle(true))}
